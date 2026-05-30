@@ -17,7 +17,7 @@ The complete reference implementation of the Krakken Butterfly permutation, alon
 
 ## 📝 Overview
 
-**Krakken Butterfly** is an evolution of the Krakken-2048 Abyssal design, introducing a novel **XOR-Rotation Butterfly Diffusion (XRBD)** layer that replaces the original Ink Cloud shuffle. Key innovations include:
+**Krakken Butterfly** is an evolution of the Krakken-2048 Abyssal design, introducing a novel **XOR-Rotation Butterfly Diffusion (XRBD)** layer. Key innovations include:
 
 - **XRBD Layer**: A 5-stage logarithmic butterfly network achieving full word-level avalanche across 32 words in a single pass using only XOR and rotation operations.
 - **Reduced Round Count**: From 10 rounds (original) to 8 rounds, with improved security margins.
@@ -27,25 +27,9 @@ The design specification has been submitted to the IACR ePrint Archive and is cu
 
 ---
 
-## 📂 Repository Contents (Coming Soon)
+## 📂 Repository Contents
 
-```
-krakken-butterfly/
-├── src/                    # Reference implementation (C/AVX2)
-│   ├── krakken_butterfly.c
-│   ├── krakken_butterfly.h
-│   └── avx2/               # AVX2-optimized routines
-├── scripts/                # Cryptanalysis verification suite
-│   ├── milp/               # MILP active S-box search models
-│   ├── smt/                # Z3 bijectivity proofs
-│   ├── rebound/            # 3-round and 4-round rebound attacks
-│   ├── avalanche/          # Bit diffusion test harness
-│   └── rotational/         # Rotational cryptanalysis tests
-├── tests/                  # Unit tests and test vectors
-├── benchmarks/             # Performance measurement tools
-├── docs/                   # Additional documentation
-└── README.md
-```
+**To come...**
 
 ---
 
@@ -84,7 +68,7 @@ make cryptanalysis
 
 ## 📄 Specification
 
-The full design specification is documented in `permutation.tex` (pending ePrint approval). Key sections include:
+The full design specification will be documented in `permutation.pdf` (pending ePrint approval). Key sections include:
 
 - XOR-Rotation Butterfly Diffusion (XRBD) — novel contribution
 - SPN sublayer (Theta → MDS → Chi)
