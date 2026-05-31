@@ -1,17 +1,17 @@
-# 🦑 Krakken-2048 Butterfly
+## 🦑 Krakken-2048 Butterfly
 
-## XOR-Rotation Butterfly Diffusion (XRBD) — A 2048-bit Wide-State Cryptographic Permutation
+### XOR-Rotation Butterfly Diffusion (XRBD) — A 2048-bit Wide-State Cryptographic Permutation
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Pre--release-orange)]()
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
 
 ---
 
 ## 📡 Announcement
 
-> **Source code and verification scripts — coming soon.**
+> **✅ Source code and verification scripts are now available!**
 
-The complete reference implementation of the Krakken Butterfly permutation, along with the full cryptanalysis verification suite (MILP models, SMT proofs, rebound attack scripts, and empirical test harnesses), will be published in this repository shortly.
+The complete reference implementation of the Krakken Butterfly permutation, along with the full cryptanalysis verification suite (MILP models, SMT proofs, rebound attack scripts, and empirical test harnesses), is now published in this repository.
 
 ---
 
@@ -27,9 +27,15 @@ The design specification has been submitted to the IACR ePrint Archive and is cu
 
 ---
 
-## 📂 Repository Contents
+## 📂 Repository Structure
 
-**To come...**
+| File | Description |
+|------|-------------|
+| `krakken.h` | Header file with function prototypes, S‑box tables, and round constants. |
+| `krakken.c` | Core permutation implementation (scalar, constant‑time). |
+| `krakken_multi.c` | AVX2‑vectorized and multi‑threaded version. |
+| `verify_krakken.c` | Verification test suite (avalanche, rebound, active S‑box, etc.). |
+| `Makefile` | Build configuration (GCC, O3 optimizations, pthread). |
 
 ---
 
@@ -47,28 +53,33 @@ The design specification has been submitted to the IACR ePrint Archive and is cu
 
 ---
 
-## 🚀 Getting Started (When Available)
+## 🚀 Getting Started
 
 ```bash
 # Clone the repository
 git clone https://github.com/effjy/krakken-butterfly.git
 cd krakken-butterfly
 
-# Build the reference implementation
+# Build all variants
 make
 
-# Run verification tests
-make test
-
-# Run cryptanalysis suite
-make cryptanalysis
+# Run verification tests and benchmarks
+make run
 ```
+
+### Build Targets
+
+| Target | Description |
+|--------|-------------|
+| `krakken_scalar` | Scalar (constant‑time) version |
+| `krakken_multi`  | AVX2 + multi‑threaded version |
+| `verify_krakken` | Verification and cryptanalysis suite |
 
 ---
 
 ## 📄 Specification
 
-The full design specification will be documented in `permutation.pdf` (pending ePrint approval). Key sections include:
+The full design specification is documented in `permutation.pdf` (pending ePrint approval). Key sections include:
 
 - XOR-Rotation Butterfly Diffusion (XRBD) — novel contribution
 - SPN sublayer (Theta → MDS → Chi)
@@ -104,4 +115,5 @@ MIT License — see [LICENSE](LICENSE) file for details.
 *🦑 Released into the abyss — 2026*
 
 *"Three paradigms. One round. Total diffusion."*
-```
+
+---
