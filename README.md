@@ -4,6 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
+[![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.32527287-blue)](https://doi.org/10.6084/m9.figshare.32527287)
 
 ---
 
@@ -23,7 +24,20 @@ The complete reference implementation of the Krakken Butterfly permutation, alon
 - **Reduced Round Count**: From 10 rounds (original) to 8 rounds, with improved security margins.
 - **Proven Full Connectivity**: Theorem-proven complete dependency graph after five stages — every output word depends on every input word.
 
-The design specification has been submitted to the IACR ePrint Archive and is currently under review.
+The design specification has been published as a preprint (see below).
+
+---
+
+## 📄 Paper
+
+**XRBD: A Bijective Butterfly Diffusion Layer with Optimal Dependency Expansion for Wide-State Cryptographic Permutations**  
+Jean-François Lachance-Caumartin
+
+[![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.32527287-blue)](https://doi.org/10.6084/m9.figshare.32527287)
+
+📄 **Download the full paper:** [`paper.pdf`](paper.pdf)
+
+The paper presents the XRBD primitive, proves its optimal dependency expansion and bijectivity, and integrates it into the Krakken-2048 Butterfly permutation. It includes formal security proofs, cryptanalytic evaluation (MILP, SMT, rebound attacks), and AVX2 performance benchmarks.
 
 ---
 
@@ -95,7 +109,7 @@ python3 scripts/rebound3_krakken.py
 
 ## 📄 Specification
 
-The full design specification is documented in `permutation.pdf` (pending ePrint approval). Key sections include:
+The full design specification is documented in [`paper.pdf`](paper.pdf) (also available via [Figshare DOI](https://doi.org/10.6084/m9.figshare.32527287)). Key sections include:
 
 - XOR-Rotation Butterfly Diffusion (XRBD) — novel contribution
 - SPN sublayer (Theta → MDS → Chi)
@@ -131,4 +145,3 @@ MIT License — see [LICENSE](LICENSE) file for details.
 *🦑 Released into the abyss — 2026*
 
 *"Three paradigms. One round. Total diffusion."*
-```
