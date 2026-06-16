@@ -1,10 +1,14 @@
-## 🦑 Krakken-2048 Butterfly
+<div align="center">
+
+<a href="https://github.com/effjy/krakken-butterfly/"><img src="titles/krakken-2048-butterfly-title.svg" height="52" alt="Krakken-2048 Butterfly"></a>
 
 ### XOR-Rotation Butterfly Diffusion (XRBD) — A 2048-bit Wide-State Cryptographic Permutation
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
 [![DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.32527287-blue)](https://doi.org/10.6084/m9.figshare.32527287)
+
+</div>
 
 ---
 
